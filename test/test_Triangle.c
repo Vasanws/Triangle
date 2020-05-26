@@ -37,3 +37,13 @@ void test_getTriangleType_given_5_2_8_expect_SCALENE()
 	TriangleType type = getTriangleType(5,2,8);
 	TEST_ASSERT_EQUAL(SCALENE, type);
 }
+void test_getTriangleType_given_5_MINUS1_9_expect_UNKNOWN()
+{
+	TriangleType type = getTriangleType(5,-1,9);
+	TEST_ASSERT_EQUAL(UNKNOWN, type);
+}
+void test_getTriangleType_given_0_0_MINUS1_expect_UNKNOWN()
+{
+	TriangleType type = getTriangleType(0,0,-1);
+	TEST_ASSERT_EQUAL(UNKNOWN, type);
+}
